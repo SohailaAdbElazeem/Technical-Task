@@ -1,12 +1,33 @@
-/* .brand:hover {
-    color:#85D99A
-} */
+ .header {
+  background-color:  #F4F6FA !important;
+  margin-top: 0.625rem;
+  border-radius: 0.4375rem;
+ }
+.logo {
+ color:#4bae63 !important;
+  font-weight: bold;  
+  text-transform: uppercase; 
+
+}
 .brand {
   color: #121313 !important;          
-   text-decoration: none;    
-  transition: 1s;           
+  text-decoration: none;    
+  transition: 1s;  
+  font-size: 22px;
 }
 
 .brand:hover {
   color: #4bae63 !important;         
+}
+
+.icon i {
+  font-size: 22px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-right: 1.25rem;
+}
+
+.icon i:hover {
+  color: #4bae63 !important; 
 }

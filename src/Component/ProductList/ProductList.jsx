@@ -50,12 +50,12 @@ export default function ProductList() {
         </div>
       ) : (
         <div className="container">
-          <div className="row">
+          <div className="row g-3 my-3">
             {filterData.map((product) => {
               return (
-                <div className="col-sm-12 col-md-4 col-lg-3" key={product.id}>
-                  <Link to={`/prodDetail/${product.id}`} className="text-decoration-none text-dark ">
-                    <div className={`${style.productcart}`}>
+                <div className="col-sm-12 col-md-4 col-lg-3 d-flex" key={product.id}>
+                  <Link to={`/prodDetail/${product.id}`} className="text-decoration-none text-dark flex-fill ">
+                    <div className={`${style.productcart} h-100 d-flex flex-column`}>
                           <img
                             src={product.image}
                             className="w-100"
@@ -68,7 +68,7 @@ export default function ProductList() {
                               padding: "10px",
                             }}
                           />
-                      <div className="product-body p-3">
+                      <div className="product-body p-3 mt-auto">
                         <h5 className="product-title fw-normal">
                           {product.title.split(" ").splice(0, 2).join(" ")}
                         </h5>

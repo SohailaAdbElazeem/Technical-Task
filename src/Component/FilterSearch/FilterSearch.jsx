@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { useQuery } from "react-query";
 import { ProductContext } from "../../context/ProductContext";
 
@@ -17,7 +17,7 @@ export default function FilterSearch() {
     return await axios.get(`https://fakestoreapi.com/products/categories`);
   }
   let { data } = useQuery("categories", getCategories);
-  console.log(data?.data);
+  // console.log(data?.data);
 
   return (
     <div className="container my-4">

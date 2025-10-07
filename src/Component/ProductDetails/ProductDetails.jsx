@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useQuery } from "react-query";
 import { useNavigate, useParams } from "react-router-dom";
 import { BallTriangle } from "react-loader-spinner";
@@ -43,20 +43,19 @@ export default function ProductDetails() {
           />
         </div>
       ) : (
-        <div className="row align-items-center my-5">
-          <div className="col-md-3 bg-secondary-subtle">
+        <div className="row align-items-center my-5 ">
+          <div className="col-md-3 bg-secondary-subtle rounded-1">
             <img
               src={data?.data.image}
               alt={data?.data.title}
               className="w-100 p-3"
             />
           </div>
-          <div className="col-md-9 my-4">
+          <div className="col-md-9 my-4 ">
             <h2>{data?.data.title}</h2>
             <h5>{data?.data.category}</h5>
             <p className="text-secondary">{data?.data.description}</p>
             <p>${data?.data.price}</p>
-            {/* <p>{data?.data.rating.count}</p> */}
             <div>
               <button
                 className="btn btn-success w-50 float-end"
