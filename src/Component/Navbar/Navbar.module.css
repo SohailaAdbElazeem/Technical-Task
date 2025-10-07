@@ -1,0 +1,12 @@
+/* .brand:hover {
+    color:#85D99A
+} */
+.brand {
+  color: #121313 !important;          
+   text-decoration: none;    
+  transition: 1s;           
+}
+
+.brand:hover {
+  color: #4bae63 !important;         
+}
