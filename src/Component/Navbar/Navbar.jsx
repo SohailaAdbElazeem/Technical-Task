@@ -23,7 +23,7 @@ export default function Navbar() {
             <ul className="navbar-nav m-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link
-                  className={`${style.brand} nav-link active text-success `}
+                  className={`${style.brand} nav-link active text-success`}
                   aria-current="page"
                   to="product"
                 >
@@ -33,7 +33,7 @@ export default function Navbar() {
 
               <li className="nav-item">
                 <Link
-                  className={`${style.brand} nav-link  `}
+                  className={`${style.brand} nav-link`}
                   aria-current="page"
                   to="product"
                 >

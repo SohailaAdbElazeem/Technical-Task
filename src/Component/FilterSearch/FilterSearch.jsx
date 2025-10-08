@@ -69,7 +69,7 @@ export default function FilterSearch() {
                     return (
                       <li key={index}>
                         <button
-                          type="btn"
+                          type="button"
                           className="dropdown-item"
                           onClick={() => {
                             setCategory(categor);
