@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useContext} from "react";
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import { ProductContext } from "../../context/ProductContext";
 
 export default function FilterSearch() {
@@ -16,7 +16,10 @@ export default function FilterSearch() {
   async function getCategories() {
     return await axios.get(`https://fakestoreapi.com/products/categories`);
   }
-  let { data } = useQuery("categories", getCategories);
+  const { data } = useQuery({
+    queryKey: ["categories"],
+    queryFn: getCategories,
+  });
   // console.log(data?.data);
 
   return (

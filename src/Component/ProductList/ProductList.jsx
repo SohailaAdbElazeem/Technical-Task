@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useQuery } from "react-query";
+import { useQuery } from '@tanstack/react-query';
 import { BallTriangle } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 import FilterSearch from "../FilterSearch/FilterSearch";
@@ -13,7 +13,10 @@ export default function ProductList() {
   async function showAllProduct() {
     return await axios.get(`https://fakestoreapi.com/products`);
   }
-  let { data, isLoading } = useQuery("product", showAllProduct);
+  const { data, isLoading } = useQuery({
+    queryKey: ["products"],
+    queryFn: showAllProduct,
+  });
   //  console.log(data?.data)
   const filterData = data?.data.filter((product) => {
     const matcheTerm = product.title

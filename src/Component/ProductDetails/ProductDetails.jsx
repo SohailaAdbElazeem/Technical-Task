@@ -1,17 +1,19 @@
 import axios from "axios";
 import { useEffect } from "react";
-import { useQuery } from "react-query";
+import { useQuery } from '@tanstack/react-query';
 import { useNavigate, useParams } from "react-router-dom";
 import { BallTriangle } from "react-loader-spinner";
 import { Helmet } from "react-helmet";
-
 export default function ProductDetails() {
   const params = useParams();
   const navigate = useNavigate();
   async function getSingleProduct() {
     return await axios.get(`https://fakestoreapi.com/products/${params.id}`);
   }
-  let { data, isLoading } = useQuery("details", getSingleProduct);
+     const { data, isLoading } = useQuery({
+    queryKey: ["details"],
+    queryFn: getSingleProduct,
+  });
   console.log(data?.data);
 
   useEffect(() => {
